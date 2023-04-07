@@ -121,6 +121,13 @@ function moveBall(){
     blocks.forEach(column => {
         column.forEach(block => {
             if(block.visible){
+                // ball.x = paddle.x;
+                // ball.y = paddle.y;
+                // ball.x += ball.dx;
+               //  ball.y += ball.dy;
+                // moveBall();
+              //  drawBall();
+                //drawBlocks();
                 
             }
         });
@@ -189,9 +196,16 @@ update();
 //Targetting the right and left arrow keys
 function keyDown(e){
     if(e.key === 'Right' || e.key === 'ArrowRight'){
-
+    //    movePaddle(); 
+        //  drawPaddle();
+    paddle.dx = paddle.dx + 1;
+    drawPaddle()
+ //   paddle.dy = paddle.dy + 1;
+    // update();
+        console.log(e.key);
+       
     } else if(e.key === 'Left' || e.key === 'ArrowLeft'){
-
+        paddle.dx = paddle.dx - 1;
     } 
 }
 
